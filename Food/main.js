@@ -1,19 +1,17 @@
 const icons = document.querySelectorAll('.section-1-icons i')
-let iconCounter = 1
+let iconCounter = 0
 
-setInterval(()=>{
-    iconCounter++
-    const icon = document.querySelector('.section-1-icons .change')
+setInterval(() => {
+    const currentIcon = icons[iconCounter];
 
-    icon.classList.remove('change')
+    // Remove 'transmute' class from current icon
+    currentIcon.classList.remove('transmute')
 
-    if(iconCounter > icons.length){
-        icons[0].classList.add('change')
-        iconCounter = 1
-    }else {
-        icon.nextElementSibling.classList.add('change')
-    }
+    // Increment counter or reset if it exceeds number of icons
+    iconCounter = (iconCounter + 1) % icons.length
 
-    
-
+    // Add 'transmute' class to next icon
+    icons[iconCounter].classList.add('transmute')
 }, 4000)
+
+
