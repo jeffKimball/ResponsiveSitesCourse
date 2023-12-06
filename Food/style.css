@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
 
+/* *********************** */
 /* General Styles */
-
+/* *********************** */
 /* reset */
 *{
     margin:0;
@@ -27,7 +28,9 @@ html {
     text-shadow: .3rem .3rem .3rem #000;
 }
 
+/* *********************** */
 /* Section-1 Styles */
+/* *********************** */
 .section-1 {
     width: 100%;
     height: 100vh;
@@ -55,8 +58,9 @@ html {
 
 
 
-
+/* *********************** */
 /* Section-2 Styles */
+/* *********************** */
 .section-2 {
     width: 100%;
     height: 100vh;
@@ -83,12 +87,12 @@ html {
     box-shadow: 1rem 1rem 1rem #000;
     position: relative;
     transform: rotateY(20deg) skewX(-1deg);
-    transition: all .1s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 
 .card:hover {
     transform: rotateY(20deg) skewX(-1deg) translateY(-2rem);
-    transition: all .5s;
+    transition: all .5s ease-in-out;
     box-shadow: 2rem 2rem 2rem #000;
 }
 
@@ -96,7 +100,7 @@ html {
     content: "";
     height: 100%;
     width: 1rem;
-    background-color: #817824;
+    background-color: #817824; 
     position: absolute;
     top: 0;
     left: -1rem;
@@ -142,6 +146,100 @@ html {
     padding: .5rem 0;
     cursor: pointer;
 }
-
-
 /* End of Section-2 Styles */
+
+
+/* *********************** */
+/* Section-3 Styles */
+/* *********************** */
+.section-3 {
+    background-color: #333;
+    padding: 5rem 0;  
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 10rem 5rem;
+}
+
+.gallery-link {
+    position: relative;
+    margin: 4rem 3rem;
+}
+
+.gallery-link::before{
+    content: '';
+    position:absolute;
+    top: 10%;
+    left: 80%;
+    width: .2rem;
+    /* height: 80%; */
+    height: 0;
+    background-color: #fff;
+    transition: height .5s;
+}
+
+.gallery-link:hover::before {
+    height: 80%;
+}
+
+.gallery-link::after{
+    content: '';
+    position:absolute;
+    top: 30%;
+    left: 10%;
+    /* width: 80%; */
+    width: 0;
+    height: .2rem;
+    background-color: #fff;
+    transition: width .5s;
+
+}
+
+.gallery-link:hover::after {
+    width: 80%;
+}
+
+.food-img {
+    width: 400px;
+    height: 280px;
+    object-fit: cover;
+    box-shadow: .3rem .3rem .3rem #050508;
+}
+
+
+
+.food-name {
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    color: #fff;
+    overflow: hidden;
+    width: 0;
+}
+
+.gallery-link:hover .food-name{    
+    width: 100%;
+    transition: width 1.5s .5s;
+}
+
+.food-description {
+    position: absolute;
+    bottom: 3vh;
+    left: 2rem;
+    width: 70%;
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    color: white;
+    visibility: hidden;
+}
+/* End of Section-3 Styles */
