@@ -12,6 +12,6 @@ setInterval(() => {
 
     // Add 'transmute' class to next icon
     icons[iconCounter].classList.add('transmute')
-}, 4000)
+}, 3000)
 
 
