@@ -14,4 +14,12 @@ setInterval(() => {
     icons[iconCounter].classList.add('transmute')
 }, 3000)
 
+const menu = document.querySelector('.menu')
+const targetItems = document.querySelectorAll('.target')
+menu.addEventListener('click', ()=>{
+    targetItems.forEach((item)=>{
+        item.classList.toggle('change')
+    })
+})
+
 
