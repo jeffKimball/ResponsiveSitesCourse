@@ -1,25 +1,26 @@
-const icons = document.querySelectorAll('.section-1-icons i')
-let iconCounter = 0
+const icons = document.querySelectorAll('.section-1-icons i');
+let iconCounter = 0;
 
-setInterval(() => {
-    const currentIcon = icons[iconCounter];
+function updateIcons() {
+    // Reset the current icon's class
+    icons[iconCounter].classList.remove('transmute');
 
-    // Remove 'transmute' class from current icon
-    currentIcon.classList.remove('transmute')
+    // Update the counter and wrap around using modulo
+    iconCounter = (iconCounter + 1) % icons.length;
 
-    // Increment counter or reset if it exceeds number of icons
-    iconCounter = (iconCounter + 1) % icons.length
+    // Apply the class to the new current icon
+    icons[iconCounter].classList.add('transmute');
+}
 
-    // Add 'transmute' class to next icon
-    icons[iconCounter].classList.add('transmute')
-}, 3000)
+// Set interval to update icons
+setInterval(updateIcons, 3000);
 
-const menu = document.querySelector('.menu')
-const targetItems = document.querySelectorAll('.target')
-menu.addEventListener('click', ()=>{
-    targetItems.forEach((item)=>{
-        item.classList.toggle('change')
-    })
-})
+const menu = document.querySelector('.menu');
+const targetItems = document.querySelectorAll('.target');
+
+// Toggle 'change' class for each target item
+menu.addEventListener('click', () => {
+    targetItems.forEach(item => item.classList.toggle('change'));
+});
 
 
