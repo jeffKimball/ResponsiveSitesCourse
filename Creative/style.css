@@ -59,7 +59,7 @@ body {
     top: 0;
     left: 0;
     border-radius: 40%;
-    animation: rotate 30s infinite;
+    animation: rotate 40s infinite;
 }
 
 @keyframes rotate {
@@ -72,6 +72,49 @@ body {
     }
 }
 
+.navbar {
+    position: relative;
+    z-index: 20;
+    top: 4rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.navbar-link {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: .2rem;
+    padding: 5px 10px;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.navbar-link:hover {
+    background-color: rgba(255,255,255, 0.3);
+}
+
+.section-1-heading {
+    font-family: 'Monoton', cursive;
+    color: #535353;
+    font-size: 7rem;
+    position: absolute;
+    top: 8vw;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo {
+    position: absolute;
+    top: 4vh;
+    left: 1.5vw;
+    /* transform: translateX(-50%); */
+}
+
+
+.logo i {
+    font-size: 4rem;
+    color: rgba(231, 251, 255, 0.6);
+}
 
 /* *************************** */
 /* End Section 1
